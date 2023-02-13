@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.main_box{
+  position: relative;
+  background-color: #555;
+  /* background-repeat:no-repeat ; */
+  /* animation: changeBg 15s infinite ease-in-out; */
+  background-size: cover;
+  height: 120vh;
+  width: 100%;
+}
+.main_box .sidebar_menu{
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: #474ce7;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.sidebar_menu .logo{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .logo a{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  top: 80px;
+  width:100%;
+}
+.sidebar_menu .menu li{
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+.sidebar_menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .social_media{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.sidebar_menu .social_media i{
+  text-decoration: none;
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 20px;
+}
+.sidebar_menu .social_media i:hover{
+  opacity: 1;
+  transition: all 0.2s linear;
+  transform: scale(1.01);
+}
+#check{
+  display: none;
+}
+.main_box .btn_one i{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;  
+}
+ .sidebar_menu .btn_two i{
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.btn_one i:hover{
+  font-size: 29px;
+}
+.btn_two i:hover{
+  font-size: 24px;
+}
+#check:checked ~ .sidebar_menu{
+  left: 0;
+}
+#check:checked ~ .btn_one i{
+  opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+  opacity: 1;
+}
+
+
+
+.conteudo {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #333; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #FFF;
+  margin: 20px 0;
+}
+
+.busca {
+  display: flex;
+  width: 300px;
+}
+.busca #searchInput {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 0;
+}
+.busca button {
+  padding: 10px;
+  font-size: 15px;
+  border: 0;
+  background-color: #555;
+  color: #FFF;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.busca button:hover {
+  background-color: #444;
+}
+
+.resultado {
+  width: 300px;
+  display: none;
+  border: 1px dotted #FFF;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #474ce7;
+}
+
+.titulo {
+  width: 100%;
+  color: #FFF;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+}
+.info .temp {
+  flex: 1;
+  text-align: center;
+}
+.info .vento {
+  flex: 1;
+  text-align: center;
+}
+.tempTitulo,
+.ventoTitulo {
+  color: #121111;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.tempInfo,
+.ventoInfo {
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+}
+.tempInfo sup {
+  font-size: 15px;
+  font-weight: normal;
+}
+.ventoInfo span {
+  font-size: 15px;
+  font-weight: normal;
+}
+.ventoArea {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+.ventoPonto {
+  width: 15px;
+  height: 1px;
+  background-color: #FFF;
+  transform-origin: left;
+}
+
+.aviso {
+  color: #FFF;
+  padding-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  color: #FFF;
+  font-size: 13px;
+}
+
+#map{
+  height: 180px;
+  width: 300px;
+  border: 1px dotted #FFF;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-size: cover;
+
+ 
+}
+
+
+@keyframes changeBg{
+  0%,100%  {background-image: url("./img/23.jpg");}
+  25% {background-image: url("./img/marco-zero-recife.jpg");}
+  50% {background-image: url("./img/marcoz.jpg");}
+  75% {background-image: url("./img/side.jpeg");}
+}
+
+.search-box{
+  position:absolute;
+  top: 8%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+
+  background: #fff;
+  height: 50px;
+  padding: 10px;
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.loupe-white{
+  display:none;
+}
+
+::-webkit-input-placeholder{
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  color: #aeaeae
+
+}
+
+.search-text{
+  background: 0;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  width: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+.search-btn{
+  width: 30px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-box:hover > .search-text{
+  width: 320px;
+  padding-left: 20px;
+
+    
+  }
+  
+
+.search-box:hover > .search-btn{
+  background: #474ce7;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.search-box:hover > .search-btn .loupe-blue{
+  display: none;
+  
+}
+
+.search-box:hover > .search-btn .loupe-white{
+  display: block;
+}
+
+.title{
+  background: #555;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position:absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+@media screen and (max-width:768px){
+
+    #map{
+      display: none;
+    }
+}
+
+@media screen and (max-width:600px){
+  #map{
+    display: none;
+    float:none;
+    text-align: center;
+   position: initial;
+  }
+}
+
